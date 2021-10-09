@@ -1,6 +1,6 @@
 const Handler = require('./Handler.js');
 
-const { museum, elite } = require('../init/buttonTemplates.js');
+const { museum, elite } = require('../concerns/buttonTemplates.js');
 const ARWEventHandler = new Handler('ae');
 
 ARWEventHandler.addEvents([
