@@ -9,19 +9,19 @@ const {
 module.exports = async function Payload(context) {
     switch (context.event.payload) {
         case 'arw_events':
-            arwEvents();
+            arwEvents(context);
             break;
         case 'arw_concerns':
-            arwConcerns();
+            arwConcerns(context);
             break;
         case 'payment_concerns':
-            paymentConcerns();
+            paymentConcerns(context);
             break;
         case 'website_concerns':
-            websiteConcerns();
+            websiteConcerns(context);
             break;
         default:
-            others();
+            others(context);
             break;
     }
 };
