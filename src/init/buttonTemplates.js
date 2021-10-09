@@ -6,7 +6,7 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'Events of ARW 2021',
-                payload: 'ae_arw_events_2',
+                payload: 'ae_arw_events',
             },
             {
                 type: 'postback',

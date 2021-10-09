@@ -8,4 +8,4 @@ const handlers = [
     require('./EliteConcerns.js'),
 ];
 
-module.exports = handlers.map((handler) => handler.Action);
+module.exports = handlers.map((handler) => handler.Action.bind(handler));

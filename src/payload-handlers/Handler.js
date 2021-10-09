@@ -14,9 +14,13 @@ PayloadHandler.prototype.addEvents = function addEvents(events) {
 };
 
 PayloadHandler.prototype.Action = function executeAction(context, props) {
-    const [prefix, trigger] = context.event.payload.split('_', 1);
+    const [prefix] = context.event.payload.split('_', 1);
+    const trigger = context.event.payload.substring(prefix.length + 1);
 
     const found = this.events.some((event) => {
+        console.log('trigger', trigger, prefix);
+        console.log('event:', event.name, this.prefix);
+        console.log();
         if (event.name === trigger && this.prefix === prefix) {
             event.action(context);
             return true;
@@ -24,7 +28,7 @@ PayloadHandler.prototype.Action = function executeAction(context, props) {
     });
 
     if (!found) {
-        props.next;
+        return props.next;
     }
 };
 

@@ -10,7 +10,7 @@ const {
 
 module.exports = async function Payload(context) {
     switch (context.event.payload) {
-        case 'arw_events_2':
+        case 'arw_events':
             arwEvents(context);
             break;
         case 'arw_concerns':
