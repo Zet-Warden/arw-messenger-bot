@@ -1,8 +1,8 @@
 console.log(process.env.MESSENGER_ACCESS_TOKEN);
 
 const { router, text, payload } = require('bottender/router');
-const quickReplies = require('./concerns/quickReplies');
-const concerns = require('./concerns/payload');
+const quickReplies = require('./quickReplies');
+const concerns = require('./payload');
 
 module.exports = async function App(context) {
     return router([
