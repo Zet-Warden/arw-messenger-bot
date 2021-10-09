@@ -3,9 +3,10 @@ const handlers = [
     require('./ARWConcerns.js'),
     require('./PaymentConcerns.js'),
     require('./WebsiteConcerns.js'),
-    require('./OtherConcerns.js'),
+
     require('./MuseumConcerns.js'),
     require('./EliteConcerns.js'),
+    require('./OtherConcerns.js'),
 ];
 
 module.exports = handlers.map((handler) => handler.Action.bind(handler));

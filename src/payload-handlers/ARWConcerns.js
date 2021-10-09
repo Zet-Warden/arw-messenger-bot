@@ -1,6 +1,6 @@
 const Handler = require('./Handler.js');
 
-const ARWConcernHandler = new Handler();
+const ARWConcernHandler = new Handler('ac');
 
 ARWConcernHandler.addEvents([
     {

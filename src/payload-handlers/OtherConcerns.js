@@ -1,6 +1,6 @@
 const Handler = require('./Handler.js');
 
-const OtherConcernHandler = new Handler('oc');
+const OtherConcernHandler = new Handler('ot');
 
 OtherConcernHandler.addEvents([
     {
