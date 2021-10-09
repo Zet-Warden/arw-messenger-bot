@@ -9,7 +9,7 @@ const websiteConcernsReply = require('./website-concerns.js');
 // const othersConcernsReply = require('./others-concerns.js');
 const museumConcernsReply = require('./museum-concerns.js');
 const eliteConcernsReply = require('./elite-concerns.js');
-//as
+//ass
 function Unknown(context) {
     context.sendText('Nu ginagawa mu?');
 }
@@ -31,7 +31,7 @@ module.exports = async function App(context) {
         payload(/^ac/i, arwConcernsReply),
         payload(/^pc/i, paymentConcernsReply),
         payload(/^wc/i, websiteConcernsReply),
-        payload(/^ot/i, othersConcernsReply),
+        // payload(/^ot/i, othersConcernsReply),
         payload(/^mu/i, museumConcernsReply),
         payload(/^et/i, eliteConcernsReply),
         route('*', Unknown),
