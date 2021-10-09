@@ -11,7 +11,7 @@ const museumConcernsReply = require('./museum-concerns.js');
 const eliteConcernsReply = require('./elite-concerns.js');
 
 function Unknown(context) {
-    context.sendText('Nu gingagawa mu?');
+    context.sendText('Nu ginagawa mu?');
 }
 
 module.exports = async function App(context) {
