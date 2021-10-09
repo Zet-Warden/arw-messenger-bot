@@ -25,11 +25,12 @@ module.exports = {
         messenger: {
             enabled: true,
             path: '/webhooks/messenger',
-            pageId: process.env.MESSENGER_PAGE_ID,
-            accessToken: process.env.MESSENGER_ACCESS_TOKEN,
-            appId: process.env.MESSENGER_APP_ID,
-            appSecret: process.env.MESSENGER_APP_SECRET,
-            verifyToken: process.env.MESSENGER_VERIFY_TOKEN,
+            pageId: '2375403326026628',
+            accessToken:
+                'EAAGsoBM5qMwBAAbRo6M8fXZAgciyB1zB5mgCRM5cYh2Po6YlqIcvCsuJe4KvIlHCEoLBF14OO1wHzsZCOhNi1hL4eOihqXbyaa49iZAH86bgyskefckGevmyeCauMwzVGYrx5QZAaVfuPfWkvfXr3TnF8IfwGJ72CYXPSz7MdhSfrI4fl595',
+            appId: '471278494001356',
+            appSecret: '254834517faa54ef7788fb55c2496200',
+            verifyToken: 'WALAEWANKO69',
             profile: {
                 getStarted: {
                     payload: 'GET_STARTED',
