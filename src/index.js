@@ -2,12 +2,11 @@ const { router, text, payload, route } = require('bottender/router');
 const quickReplies = require('./concerns/quickReplies.js');
 const concerns = require('./concerns/payload.js');
 
-console.log('HELLOOO');
 const arwEventsReply = require('./arw-events.js');
 const arwConcernsReply = require('./arw-concerns.js');
 const paymentConcernsReply = require('./payment-concerns.js');
 const websiteConcernsReply = require('./website-concerns.js');
-const othersConcernsReply = require('./others-concerns.js');
+const othersConcernsReply = require('./others-concerns');
 const museumConcernsReply = require('./museum-concerns.js');
 const eliteConcernsReply = require('./elite-concerns.js');
 
