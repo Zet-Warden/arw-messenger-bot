@@ -1,4 +1,23 @@
-module.exports = async function QuickReplies(context) {
+const Handler = require('../CommandHandler.js');
+
+const StartupHandler = new Handler();
+
+StartupHandler.addEvents([
+    {
+        name: '!start',
+        type: 'text',
+        blockConclusion: true,
+        action: createQuickReplies,
+    },
+    {
+        name: 'to_bot',
+        type: 'payload',
+        blockConclusion: true,
+        action: createQuickReplies,
+    },
+]);
+
+async function createQuickReplies(context) {
     await context.sendText('What are your concerns?', {
         quickReplies: [
             {
@@ -28,4 +47,5 @@ module.exports = async function QuickReplies(context) {
             },
         ],
     });
-};
+}
+module.exports = StartupHandler;

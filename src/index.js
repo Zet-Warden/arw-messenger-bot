@@ -1,26 +1,10 @@
-const { router, route, text, payload } = require('bottender/router');
 const { chain } = require('bottender');
-const quickReplies = require('./init/quickReplies.js');
-const concerns = require('./init/payload.js');
-const handlers = require('./payload-handlers/HandlerList.js');
-
-function init(context, { next }) {
-    return router([
-        text('hi', quickReplies),
-        payload(
-            [
-                'arw_events',
-                'arw_concerns',
-                'payment_concerns',
-                'website_concerns',
-                'others',
-            ],
-            concerns
-        ),
-        route('*', next),
-    ]);
-}
+const handlers = require('./HandlerList.js');
 
 module.exports = async function App(context) {
+<<<<<<< Updated upstream
     return chain([init, ...handlers]);
+=======
+    return chain([...handlers]);
+>>>>>>> Stashed changes
 };
