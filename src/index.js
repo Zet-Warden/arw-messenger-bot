@@ -1,4 +1,5 @@
-const { router, route, chain } = require('bottender/router');
+const { router, route } = require('bottender/router');
+const { chain } = require('bottender');
 const quickReplies = require('./init/quickReplies.js');
 const concerns = require('./init/payload.js');
 const handlers = require('./payload-handlers/HandlerList.js');
