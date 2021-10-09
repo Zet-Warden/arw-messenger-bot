@@ -6,7 +6,7 @@ const arwEventsReply = require('./arw-events.js');
 const arwConcernsReply = require('./arw-concerns.js');
 const paymentConcernsReply = require('./payment-concerns.js');
 const websiteConcernsReply = require('./website-concerns.js');
-// const othersConcernsReply = require('./others-concerns.js');
+const othersConcernsReply = require('./others-concerns.js');
 const museumConcernsReply = require('./museum-concerns.js');
 const eliteConcernsReply = require('./elite-concerns.js');
 
