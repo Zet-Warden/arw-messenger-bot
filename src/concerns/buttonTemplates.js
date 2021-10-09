@@ -81,6 +81,44 @@ const ButtonTemplates = {
             },
         ]);
     },
+    async museum(context) {
+        await context.sendButtonTemplate(templateTitle, [
+          {
+              type: 'postback',
+              title: 'What is "Museum Day, Everyday"?',
+              payload: 'museum_what',
+          },
+          {
+              type: 'postback',
+              title: 'What is the schedule for "Museum Day Everyday?"',
+              payload: 'museum_sched',
+          },
+          {
+              type: 'postback',
+              title: 'How can we participate in the Museum Day Everyday"',
+              payload: 'museum_part',
+          }
+        ]);
+    },
+    async elite(context) {
+      await context.sendButtonTemplate(templateTitle, [
+        {
+            type: 'postback',
+            title: 'What is the ARW Elite?',
+            payload: 'elite_what',
+        },
+        {
+            type: 'postback',
+            title: 'When is the ARW Elite?',
+            payload: 'elite_when',
+        },
+        {
+            type: 'postback',
+            title: 'Where and how can we watch the event?',
+            payload: 'elite_watch',
+        }
+      ]);
+  },
 };
 
 module.exports = ButtonTemplates;
