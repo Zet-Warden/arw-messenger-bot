@@ -1,5 +1,3 @@
-console.log(process.env.MESSENGER_ACCESS_TOKEN);
-
 const { router, text, payload } = require('bottender/router');
 const quickReplies = require('./concerns/quickReplies.js');
 const concerns = require('./concerns/payload.js');
