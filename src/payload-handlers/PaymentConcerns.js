@@ -1,16 +1,24 @@
-module.exports = async function (context) {
-    const msg = context.event.payload;
+const Handler = require('./Handler.js');
 
-    switch (msg) {
-        case 'pc_pay_registration':
+const PaymentConcernHandler = new Handler('pc');
+
+PaymentConcernHandler.addEvents([
+    {
+        name: 'pay_registration',
+        action: (context) => {
             context.sendText(
                 "Org Registration Fee is paid through the Registration Form of the Organization. You can find the Registration Form in the ARW Website: arw.dlsucso.com under the Organization's Page."
             );
-            break;
-        case 'pc_send_pop':
-            contextn.sendText(
+        },
+    },
+    {
+        name: 'send_pop',
+        action: (context) => {
+            context.sendText(
                 "Proof of payment is uploaded on the Registration Form which can be seen on the ARW Website: arw.dlsucso.com under the Organization's Page."
             );
-            break;
-    }
-};
+        },
+    },
+]);
+
+module.exports = PaymentConcernHandler;

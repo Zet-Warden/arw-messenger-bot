@@ -1,20 +1,9 @@
-const { router, text, payload, route } = require('bottender/router');
+const { router, route, chain } = require('bottender/router');
 const quickReplies = require('./concerns/quickReplies.js');
 const concerns = require('./concerns/payload.js');
+const handlers = require('./payload-handlers/HandlerList.js');
 
-const arwEventsReply = require('./arw-events.js');
-const arwConcernsReply = require('./arw-concerns.js');
-const paymentConcernsReply = require('./payment-concerns.js');
-const websiteConcernsReply = require('./website-concerns.js');
-const othersConcernsReply = require('./others-concerns.js');
-const museumConcernsReply = require('./museum-concerns.js');
-const eliteConcernsReply = require('./elite-concerns.js');
-
-function Unknown(context) {
-    context.sendText('Nu ginagawa mu?');
-}
-
-module.exports = async function App(context) {
+function init(context, { next }) {
     return router([
         text('hi', quickReplies),
         payload(
@@ -27,13 +16,10 @@ module.exports = async function App(context) {
             ],
             concerns
         ),
-        payload(/^ae/i, arwEventsReply),
-        payload(/^ac/i, arwConcernsReply),
-        payload(/^pc/i, paymentConcernsReply),
-        payload(/^wc/i, websiteConcernsReply),
-        payload(/^ot/i, othersConcernsReply),
-        payload(/^mu/i, museumConcernsReply),
-        payload(/^et/i, eliteConcernsReply),
-        route('*', Unknown),
+        route('*', next),
     ]);
+}
+
+module.exports = async function App(context) {
+    return chain([init, ...handlers]);
 };
