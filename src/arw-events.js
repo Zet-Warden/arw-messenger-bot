@@ -6,12 +6,8 @@ switch (msg) {
     break;
 
   // ------------------- About It's Museum Day Everyday ----------------------
-  case "arw_museum":
-    await context.sendText() // send button template
-    break;
-
   case "museum_what":
-    await context.sendText("SImilar to the typical booth set-up per org during face to face classes, this time we will be doing it through zoom. It’s Museum Day, Everyday will be an avenue for CSO organizations to recruit and promote their hearts outs by virtually connecting to the Lasallian community.")
+    await context.sendText("Similar to the typical booth set-up per org during face to face classes, this time we will be doing it through zoom. It’s Museum Day, Everyday will be an avenue for CSO organizations to recruit and promote their hearts outs by virtually connecting to the Lasallian community.")
     break;
 
   case "museum_sched":

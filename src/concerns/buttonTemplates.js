@@ -5,17 +5,17 @@ const ButtonTemplates = {
         await context.sendButtonTemplate(templateTitle, [
             {
                 type: 'postback',
-                title: 'What are the events of ARW 2021?',
+                title: 'Events of ARW 2021',
                 payload: 'arw_events',
             },
             {
                 type: 'postback',
-                title: "About It's Museum Day Everday",
+                title: "It's Museum Day Everday",
                 payload: 'arw_museum',
             },
             {
                 type: 'postback',
-                title: 'About The ARW Elite',
+                title: 'The ARW Elite',
                 payload: 'arw_elite',
             },
         ]);
@@ -24,17 +24,17 @@ const ButtonTemplates = {
         await context.sendButtonTemplate(templateTitle, [
             {
                 type: 'postback',
-                title: 'What is Annual Rectuitment Week?',
+                title: 'What is ARW?',
                 payload: 'about_arw',
             },
             {
                 type: 'postback',
-                title: 'Where do  I  register to apply for an organization?',
+                title: 'Register for an Org',
                 payload: 'register_organization',
             },
             {
                 type: 'postback',
-                title: 'Until when can I join an organization?',
+                title: 'Registration Deadline',
                 payload: 'join_organization',
             },
         ]);
@@ -43,12 +43,12 @@ const ButtonTemplates = {
         await context.sendButtonTemplate(templateTitle, [
             {
                 type: 'postback',
-                title: 'How do I pay for the registration?',
+                title: 'Registration Payment',
                 payload: 'pay_registration',
             },
             {
                 type: 'postback',
-                title: 'Where do I send my proof of payment?',
+                title: 'Proof of Payment',
                 payload: 'send_pop',
             },
         ]);

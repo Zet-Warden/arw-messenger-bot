@@ -3,6 +3,8 @@ const {
     arwConcerns,
     paymentConcerns,
     websiteConcerns,
+    museum,
+    elite,
     others,
 } = require('./buttonTemplates');
 
@@ -19,6 +21,12 @@ module.exports = async function Payload(context) {
             break;
         case 'website_concerns':
             websiteConcerns(context);
+            break;
+        case 'arw_museum':
+            museum(context);
+            break;
+        case 'arw_elite':
+            elite(context);
             break;
         default:
             others(context);
