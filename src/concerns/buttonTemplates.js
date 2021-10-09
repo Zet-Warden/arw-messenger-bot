@@ -6,17 +6,17 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'Events of ARW 2021',
-                payload: 'arw_events',
+                payload: 'ae_arw_events_2',
             },
             {
                 type: 'postback',
                 title: "It's Museum Day Everday",
-                payload: 'arw_museum',
+                payload: 'ae_arw_museum',
             },
             {
                 type: 'postback',
                 title: 'The ARW Elite',
-                payload: 'arw_elite',
+                payload: 'ae_arw_elite',
             },
         ]);
     },
@@ -25,17 +25,17 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'What is ARW?',
-                payload: 'about_arw',
+                payload: 'ac_about_arw',
             },
             {
                 type: 'postback',
                 title: 'Register for an Org',
-                payload: 'register_organization',
+                payload: 'ac_register_organization',
             },
             {
                 type: 'postback',
                 title: 'Registration Deadline',
-                payload: 'join_organization',
+                payload: 'ac_join_organization',
             },
         ]);
     },
@@ -44,12 +44,12 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'Registration Payment',
-                payload: 'pay_registration',
+                payload: 'pc_pay_registration',
             },
             {
                 type: 'postback',
                 title: 'Proof of Payment',
-                payload: 'send_pop',
+                payload: 'pc_send_pop',
             },
         ]);
     },
@@ -58,12 +58,12 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'When will the Website Open?',
-                payload: 'website_open',
+                payload: 'wc_website_open',
             },
             {
                 type: 'postback',
                 title: 'Is the website functional 24/7?',
-                payload: 'website_24/7',
+                payload: 'wc_website_24/7',
             },
         ]);
     },
@@ -72,53 +72,53 @@ const ButtonTemplates = {
             {
                 type: 'postback',
                 title: 'Is Joining an Organization required?',
-                payload: 'join_org',
+                payload: 'ot_join_org',
             },
             {
                 type: 'postback',
                 title: 'Are there requirements in joining an organization?',
-                payload: 'join_requirements',
+                payload: 'ot_join_requirements',
             },
         ]);
     },
     async museum(context) {
         await context.sendButtonTemplate(templateTitle, [
-          {
-              type: 'postback',
-              title: 'What is "Museum Day, Everyday"?',
-              payload: 'museum_what',
-          },
-          {
-              type: 'postback',
-              title: 'What is the schedule for "Museum Day Everyday?"',
-              payload: 'museum_sched',
-          },
-          {
-              type: 'postback',
-              title: 'How can we participate in the Museum Day Everyday"',
-              payload: 'museum_part',
-          }
+            {
+                type: 'postback',
+                title: 'What is "Museum Day, Everyday"?',
+                payload: 'mu_museum_what',
+            },
+            {
+                type: 'postback',
+                title: 'What is the schedule for "Museum Day Everyday?"',
+                payload: 'mu_museum_sched',
+            },
+            {
+                type: 'postback',
+                title: 'How can we participate in the Museum Day Everyday"',
+                payload: 'mu_museum_part',
+            },
         ]);
     },
     async elite(context) {
-      await context.sendButtonTemplate(templateTitle, [
-        {
-            type: 'postback',
-            title: 'What is the ARW Elite?',
-            payload: 'elite_what',
-        },
-        {
-            type: 'postback',
-            title: 'When is the ARW Elite?',
-            payload: 'elite_when',
-        },
-        {
-            type: 'postback',
-            title: 'Where and how can we watch the event?',
-            payload: 'elite_watch',
-        }
-      ]);
-  },
+        await context.sendButtonTemplate(templateTitle, [
+            {
+                type: 'postback',
+                title: 'What is the ARW Elite?',
+                payload: 'et_elite_what',
+            },
+            {
+                type: 'postback',
+                title: 'When is the ARW Elite?',
+                payload: 'et_elite_when',
+            },
+            {
+                type: 'postback',
+                title: 'Where and how can we watch the event?',
+                payload: 'et_elite_watch',
+            },
+        ]);
+    },
 };
 
 module.exports = ButtonTemplates;
