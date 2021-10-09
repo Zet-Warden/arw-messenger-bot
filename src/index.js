@@ -1,3 +1,8 @@
+const { router, text } = require('bottender/router');
+const quickReplies = require('./quickreplies')
+
 module.exports = async function App(context) {
-  await context.sendText('Welcome to Bottender');
+  return router([
+    text('hi', quickReplies),
+  ]);
 };
