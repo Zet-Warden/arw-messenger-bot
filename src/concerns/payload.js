@@ -1,4 +1,10 @@
-const { arwEvents, arwConcerns } = require('./buttonTemplates');
+const {
+    arwEvents,
+    arwConcerns,
+    paymentConcerns,
+    websiteConcerns,
+    others,
+} = require('./buttonTemplates');
 
 module.exports = async function Payload(context) {
     switch (context.event.payload) {
@@ -9,10 +15,13 @@ module.exports = async function Payload(context) {
             arwConcerns();
             break;
         case 'payment_concerns':
+            paymentConcerns();
             break;
         case 'website_concerns':
+            websiteConcerns();
             break;
         default:
+            others();
             break;
     }
 };
