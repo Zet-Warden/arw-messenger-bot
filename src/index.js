@@ -22,5 +22,8 @@ function init(context, { next }) {
 }
 
 module.exports = async function App(context) {
-    return chain([init, ...handlers]);
+    // return chain([init, ...handlers]);
+
+    await context.sendText('hi', { personaId: '337754377725622' });
+    await context.sendText('hi', { personaId: '1542383836115368' });
 };

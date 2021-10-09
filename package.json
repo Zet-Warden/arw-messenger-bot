@@ -6,7 +6,8 @@
     "dev": "bottender dev",
     "lint": "eslint . ",
     "start": "bottender start",
-    "test": "jest"
+    "test": "jest",
+    "persona": "bottender messenger persona create --name=\"John Mathew\" --pic=\"https://source.unsplash.com/random\""
   },
   "dependencies": {
     "bottender": "^1.5.3",

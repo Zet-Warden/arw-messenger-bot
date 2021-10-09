@@ -31,9 +31,12 @@ module.exports = {
             appSecret: process.env.MESSENGER_APP_SECRET,
             verifyToken: process.env.MESSENGER_VERIFY_TOKEN,
             profile: {
-                getStarted: {
-                    payload: 'GET_STARTED',
-                },
+                greeting: [
+                    {
+                        locale: 'default',
+                        text: 'Hello! Welcome to my bot~ ?',
+                    },
+                ],
             },
         },
         whatsapp: {
