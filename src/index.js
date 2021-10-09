@@ -4,7 +4,7 @@ const concerns = require('./concerns/payload');
 
 module.exports = async function App(context) {
     return router([
-        payload('GET_STARTED', quickReplies),
+        text('hi', quickReplies),
         payload(
             [
                 'arw_events',
