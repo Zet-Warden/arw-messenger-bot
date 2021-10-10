@@ -4,6 +4,16 @@ const StartupHandler = new Handler();
 
 StartupHandler.addEvents([
     {
+        name: 'GET_STARTED',
+        type: 'payload',
+        blockConclusion: true,
+        action: async (context) => {
+            context.sendText(
+                'Good Day Lasallian! How can we help you? ARW 2021 will reply within the day. In the meantime, for FAQ, get started chatting with out bot by typing "!start"'
+            );
+        },
+    },
+    {
         name: '!start',
         type: 'text',
         blockConclusion: true,
@@ -14,6 +24,14 @@ StartupHandler.addEvents([
         type: 'payload',
         blockConclusion: true,
         action: createQuickReplies,
+    },
+    {
+        name: 'help',
+        type: 'payload',
+        blockConclusion: true,
+        action: async (context) => {
+            context.sendText('Type "!start" to start chatting with the bot.');
+        },
     },
 ]);
 
