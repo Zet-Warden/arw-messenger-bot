@@ -9,7 +9,7 @@ StartupHandler.addEvents([
         blockConclusion: true,
         action: async (context) => {
             context.sendText(
-                'Good Day Lasallian! How can we help you? ARW 2021 will reply within the day. In the meantime, for FAQ, get started chatting with out bot by typing "!start"'
+                'Good Day, Lasallian! ARW 2021 will reply within the day. In the meantime, you may start chatting with our bot by typing "!start".'
             );
         },
     },
