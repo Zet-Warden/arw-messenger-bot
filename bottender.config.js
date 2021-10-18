@@ -31,37 +31,10 @@ module.exports = {
             appSecret: process.env.MESSENGER_APP_SECRET,
             verifyToken: process.env.MESSENGER_VERIFY_TOKEN,
             profile: {
-                getStarted: {
-                    payload: 'GET_STARTED',
-                },
                 greeting: [
                     {
                         locale: 'default',
-                        text: 'The Official ARW Facebook Page. For all things ARW related.',
-                    },
-                ],
-                persistentMenu: [
-                    {
-                        locale: 'default',
-                        composerInputDisabled: false,
-                        callToActions: [
-                            {
-                                type: 'postback',
-                                title: 'Talk to Human',
-                                payload: 'to_human',
-                            },
-                            {
-                                type: 'postback',
-                                title: 'Talk to Chatbot',
-                                payload: 'to_bot',
-                            },
-                            {
-                                type: 'web_url',
-                                title: 'Visit the Official Website',
-                                url: 'https://dlsuarw2021.live',
-                                webviewHeightRatio: 'full',
-                            },
-                        ],
+                        text: 'Hello! Welcome to my bot~ ?',
                     },
                 ],
             },
