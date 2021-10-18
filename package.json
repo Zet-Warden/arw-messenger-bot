@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "bottender dev",
+    "set": "bottender messenger profile set",
     "lint": "eslint . ",
     "start": "bottender start",
     "test": "jest",

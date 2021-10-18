@@ -31,10 +31,31 @@ module.exports = {
             appSecret: process.env.MESSENGER_APP_SECRET,
             verifyToken: process.env.MESSENGER_VERIFY_TOKEN,
             profile: {
-                greeting: [
+                getStarted: {
+                    payload: 'GET_STARTED',
+                },
+                persistentMenu: [
                     {
                         locale: 'default',
-                        text: 'Hello! Welcome to my bot~ ?',
+                        composerInputDisabled: false,
+                        callToActions: [
+                            {
+                                type: 'postback',
+                                title: 'Talk to human',
+                                payload: 'to_human',
+                            },
+                            {
+                                type: 'postback',
+                                title: 'Talk to bot',
+                                payload: 'to_bot',
+                            },
+                            {
+                                type: 'web_url',
+                                title: 'Visit official website',
+                                url: 'https://dlsuarw2021.live/',
+                                webviewHeightRatio: 'full',
+                            },
+                        ],
                     },
                 ],
             },
