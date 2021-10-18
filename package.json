@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "bottender dev",
+    "web": "bottender messenger webhook set",
     "set": "bottender messenger profile set",
     "lint": "eslint . ",
     "start": "bottender start",
