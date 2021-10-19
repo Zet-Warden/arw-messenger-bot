@@ -26,7 +26,7 @@ EliteConcernHandler.addEvents([
         type: 'payload',
         action: async (context) => {
             await context.sendText(
-                'You can watch the Live Announcement of Top 10 and Coronation Night in the official facebook page of ARW 2021: <<link>>>'
+                'You can watch the Live Announcement of Top 10 and Coronation Night in the official facebook page of ARW 2021: https://www.facebook.com/DLSUARW'
             );
         },
     },
